@@ -175,6 +175,26 @@ GPU sharing should both maximize GPU utilization and fulfill application SLOs.
 System throughput is a good proxy metric for GPU utilization. Application SLOs
 are 
 
-## 
+## Pushing the Pareto Frontier
+
+![LithOS provides the utilization of MPS with the isolation of MIG.](
+    trade-off.pdf)
+
+## Correctly Allocating Performance
+
+![LithOS services critical applications while allowing best-effort execution.](
+    goodput.pdf)
+
+## Successfully Limiting Tail Latencies
+
+![LithOS successfully limits tail latencies by preventing interference.](
+    latency.pdf)
+
+Without partitioning, sharing systems are unable to limit tail latencies. These
+diverge on MPS, priority, REEF, and Orion. Temporal partitioning systems are
+able to limit this to some extent and perform better. LithOS effectively limits
+latencies close to the isolated execution of MPS limits and is the only system
+that meets all SLOs. Specifically, LithOS reduces tail latencies 13× compared
+to MPS and 12× compared to Orion.
 
 # Conclusion
